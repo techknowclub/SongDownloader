@@ -7,7 +7,8 @@ import urllib
 
 def youtubedl(search):
     media = "audio"
-    url = 'https://www.youtube.com/results?search_query=' + search[:len(search)-3]
+    url = 'https://www.youtube.com/results?search_query=' + \
+          search[:len(search)-3]
     sc = requests.get(url)
     soup = BeautifulSoup(sc.content, 'html.parser')
     title = soup.findAll('h3', {'class': 'yt-lockup-title '})
@@ -47,7 +48,8 @@ def youtubedl(search):
 
 
 flag = ""
-headers = {"User-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"}
+headers = {"User-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 \
+           (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"}
 search = raw_input(">")
 for song in search.split(', '):
     if song[len(song) - 3:] == ' -y':

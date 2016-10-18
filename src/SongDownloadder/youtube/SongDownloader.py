@@ -86,7 +86,7 @@ for song in search.split(', '):
                 session2 = dryscrape.Session()
                 session2.visit(download)
                 response2 = session2.body()
-                soup1 = BeautifulSoup(response2, 'lxml')
+                soup1 = BeautifulSoup(response2, 'html.parser')
                 final_link = soup1.findAll('span', {'class': 'url'})
                 final_link = str(final_link)[19:].split('<')
                 print "Downloading from: \n", final_link[0], "\n\n"

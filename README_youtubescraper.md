@@ -4,6 +4,7 @@ a simple webscraping code developed in java using jsoup and ui4j libraries to do
 Run this command to install system dependencies 
 
 `apt-get install qt5-default libqt5webkit5-dev build-essential python-lxml python-pip xvfb` 
+`pip install dryscrape`
 
 Python Based Requirements:
 
